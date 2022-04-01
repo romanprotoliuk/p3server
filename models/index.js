@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/p3project';
@@ -14,5 +15,5 @@ db.on('error', (err) => {
 });
 
 module.exports.User = require('./user');
-module.exports.Chatroom = require('./chatroom')
-module.exports.Messages = require('./message')
+module.exports.Chatroom = require('./chatroom');
+module.exports.Messages = require('./message');
